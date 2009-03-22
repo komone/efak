@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<efak_config>
+	<isopackagers>
+		<!-- BERLIN GROUP INTERFACE  -->
+		<isopackager name="berlin_group">
+		  <isofield
+			  id="0"
+			  length="4"
+			  name="Message Type Indicator"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="1"
+			  length="8"
+			  name="Bitmap"
+			  class="IFB_BITMAP"/>
+		  <isofield
+			  id="2"
+			  length="19"
+			  name="Primary Account number"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="3"
+			  length="6"
+			  name="Processing Code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="4"
+			  length="12"
+			  name="Amount, Transaction"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="5"
+			  length="12"
+			  name="Amount, Reconciliation"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="6"
+			  length="12"
+			  name="Amount, Cardholder billing"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="7"
+			  length="10"
+			  name="Date and time, transmission"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="8"
+			  length="8"
+			  name="Amount, Cardholder billing fee"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="9"
+			  length="8"
+			  name="Conversion rate, Reconciliation"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="10"
+			  length="8"
+			  name="Conversion rate, Cardholder billing"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="11"
+			  length="6"
+			  name="Systems trace audit number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="12"
+			  length="12"
+			  name="Date and time, Local transaction"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="13"
+			  length="4"
+			  name="Date, Effective"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="14"
+			  length="4"
+			  name="Date, Expiration"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="15"
+			  length="6"
+			  name="Date, Settlement"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="16"
+			  length="4"
+			  name="Date, Conversion"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="17"
+			  length="4"
+			  name="Date, Capture"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="18"
+			  length="4"
+			  name="Merchant type"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="19"
+			  length="3"
+			  name="Country code, Acquiring institution"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="20"
+			  length="3"
+			  name="Country code, Primary account number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="21"
+			  length="3"
+			  name="Country code, Forwarding institution"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="22"
+			  length="12"
+			  name="Point of service data code"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="23"
+			  length="3"
+			  name="Card sequence number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="24"
+			  length="3"
+			  name="Function code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="25"
+			  length="4"
+			  name="Message reason code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="26"
+			  length="4"
+			  name="Card acceptor business code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="27"
+			  length="1"
+			  name="Approval code length"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="28"
+			  length="6"
+			  name="Date, Reconciliation"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="29"
+			  length="3"
+			  name="Reconciliation indicator"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="30"
+			  length="24"
+			  name="Amounts, original"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="31"
+			  length="99"
+			  name="Acquirer reference data"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="32"
+			  length="11"
+			  name="Acquirer institution identification code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="33"
+			  length="11"
+			  name="Forwarding institution identification code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="34"
+			  length="28"
+			  name="Primary account number, extended"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="35"
+			  length="37"
+			  name="Track 2 data"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="36"
+			  length="104"
+			  name="Track 3 data"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="37"
+			  length="12"
+			  name="Retrieval reference number"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="38"
+			  length="6"
+			  name="Approval code"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="39"
+			  length="3"
+			  name="Action code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="40"
+			  length="3"
+			  name="Service code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="41"
+			  length="8"
+			  name="Card acceptor terminal identification"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="42"
+			  length="15"
+			  name="Card acceptor identification code"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="43"
+			  length="99"
+			  name="Card acceptor name/location"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="44"
+			  length="99"
+			  name="Additional response data"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="45"
+			  length="76"
+			  name="Track 1 data"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="46"
+			  length="204"
+			  name="Amounts, Fees"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="47"
+			  length="999"
+			  name="Additional data - national"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="48"
+			  length="999"
+			  name="Additional data - private"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="49"
+			  length="3"
+			  name="Currency code, Transaction"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="50"
+			  length="3"
+			  name="Currency code, Reconciliation"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="51"
+			  length="3"
+			  name="Currency code, Cardholder billing"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="52"
+			  length="8"
+			  name="Personal identification number [PIN] data"
+			  class="IFB_BINARY"/>
+		  <isofield
+			  id="53"
+			  length="48"
+			  name="Security related control information"
+			  class="IFB_LLBINARY"/>
+		  <isofield
+			  id="54"
+			  length="120"
+			  name="Amounts, additional"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="55"
+			  length="255"
+			  name="IC card system related data"
+			  class="IFB_LLLBINARY"/>
+		  <isofield
+			  id="56"
+			  length="35"
+			  name="Original data elements"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="57"
+			  length="3"
+			  name="Authorization life cycle code"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="58"
+			  length="11"
+			  name="Authorizing agent institution Id Code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="59"
+			  length="999"
+			  name="Additional data - private"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="60"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="61"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="62"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="63"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="64"
+			  length="8"
+			  name="Message authentication code field"
+			  class="IFB_BINARY"/>
+		  <isofield
+			  id="65"
+			  length="8"
+			  name="Reserved for ISO use"
+			  class="IFB_BINARY"/>
+		  <isofield
+			  id="66"
+			  length="204"
+			  name="Amounts, original fees"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="67"
+			  length="2"
+			  name="Extended payment data"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="68"
+			  length="3"
+			  name="Country code, receiving institution"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="69"
+			  length="3"
+			  name="Country code, settlement institution"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="70"
+			  length="3"
+			  name="Country code, authorizing agent Inst."
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="71"
+			  length="8"
+			  name="Message number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="72"
+			  length="999"
+			  name="Data record"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="73"
+			  length="6"
+			  name="Date, action"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="74"
+			  length="10"
+			  name="Credits, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="75"
+			  length="10"
+			  name="Credits, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="76"
+			  length="10"
+			  name="Debits, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="77"
+			  length="10"
+			  name="Debits, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="78"
+			  length="10"
+			  name="Transfer, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="79"
+			  length="10"
+			  name="Transfer, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="80"
+			  length="10"
+			  name="Inquiries, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="81"
+			  length="10"
+			  name="Authorizations, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="82"
+			  length="10"
+			  name="Inquiries, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="83"
+			  length="10"
+			  name="Payments, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="84"
+			  length="10"
+			  name="Payments, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="85"
+			  length="10"
+			  name="Fee collections, number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="86"
+			  length="16"
+			  name="Credits, amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="87"
+			  length="16"
+			  name="Credits, reversal amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="88"
+			  length="16"
+			  name="Debits, amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="89"
+			  length="16"
+			  name="Debits, reversal amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="90"
+			  length="10"
+			  name="Authorizations, reversal number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="91"
+			  length="3"
+			  name="Country code, transaction Dest. Inst."
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="92"
+			  length="3"
+			  name="Country code, transaction Orig. Inst."
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="93"
+			  length="5"
+			  name="Transaction Dest. Inst. Id code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="94"
+			  length="5"
+			  name="Transaction Orig. Inst. Id code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="95"
+			  length="99"
+			  name="Card issuer reference data"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="96"
+			  length="999"
+			  name="Key management data"
+			  class="IFA_LLLBINARY"/>
+		  <isofield
+			  id="97"
+			  length="17"
+			  name="Amount, Net reconciliation"
+			  class="IFA_AMOUNT"/>
+		  <isofield
+			  id="98"
+			  length="25"
+			  name="Payee"
+			  class="IF_CHAR"/>
+		  <isofield
+			  id="99"
+			  length="11"
+			  name="Settlement institution Id code"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="100"
+			  length="11"
+			  name="Receiving institution Id code"
+			  class="IFA_LLNUM"/>
+		  <isofield
+			  id="101"
+			  length="17"
+			  name="File name"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="102"
+			  length="28"
+			  name="Account identification 1"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="103"
+			  length="28"
+			  name="Account identification 2"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="104"
+			  length="100"
+			  name="Transaction description"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="105"
+			  length="16"
+			  name="Credits, Chargeback amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="106"
+			  length="16"
+			  name="Debits, Chargeback amount"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="107"
+			  length="16"
+			  name="Credits, Chargeback number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="108"
+			  length="16"
+			  name="Debits, Chargeback number"
+			  class="IFA_NUMERIC"/>
+		  <isofield
+			  id="109"
+			  length="84"
+			  name="Credits, Fee amounts"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="110"
+			  length="84"
+			  name="Debits, Fee amounts"
+			  class="IFA_LLCHAR"/>
+		  <isofield
+			  id="111"
+			  length="999"
+			  name="Reserved for ISO use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="112"
+			  length="999"
+			  name="Reserved for ISO use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="113"
+			  length="999"
+			  name="Reserved for ISO use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="114"
+			  length="999"
+			  name="Reserved for ISO use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="115"
+			  length="999"
+			  name="Reserved for ISO use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="116"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="117"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="118"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="119"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="120"
+			  length="999"
+			  name="Ente liquidatore"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="121"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="122"
+			  length="999"
+			  name="Reserved for national use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="123"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="124"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="125"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="126"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="127"
+			  length="999"
+			  name="Reserved for private use"
+			  class="IFA_LLLCHAR"/>
+		  <isofield
+			  id="128"
+			  length="8"
+			  name="Message authentication code field"
+			  class="IFB_BINARY"/>
+		</isopackager>
+	</isopackagers>
+
+	<interfaces>
+		<iso_interface
+			name="outgoing"
+			pool_size="1"
+			iso_version="1"
+			callback="{transaction_mgr,start_transaction,[]}"
+			security_module="bg_security"
+			status="up"
+			sign_on="true"
+			timeout="30000"
+			retry="3"
+			repeat_timeout="30000"
+			local_inst_id="65401"
+			remote_inst_id="49201"
+			currency="978"
+			cut_off="00:10:00"
+			isopackager="berlin_group" >
+			<msg_composition>
+				<msg mti="1100" >
+					<field presence="m">2</field>
+					<field presence="m">3</field>
+					<field presence="m">4</field>
+					<field presence="o">6</field>
+					<field presence="m">7</field>
+					<field presence="o">10</field>
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="o">14</field>
+					<field presence="m">22</field>
+					<field presence="o">23</field>
+					<field presence="m">24</field>
+					<field presence="m">26</field>
+					<field presence="m">32</field>
+					<field presence="o">35</field>
+					<field presence="m">37</field>
+					<field presence="m">41</field>
+					<field presence="m">42</field>
+					<field presence="m">43</field>
+					<field presence="m">49</field>
+					<field presence="o">51</field>
+					<field presence="o">52</field>
+					<field presence="m">53</field>
+					<field presence="o">54</field>
+					<field presence="o">55</field>
+					<field presence="o">59</field>
+					<field presence="m">64</field>
+				</msg>
+				<msg mti="1110" >
+					<field presence="m">2</field>
+					<field presence="m">3</field>
+					<field presence="m">4</field>
+					<field presence="o">6</field>
+					<field presence="m">7</field>
+					<field presence="o">10</field>
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="o">30</field>
+					<field presence="m">32</field>
+					<field presence="m">37</field>
+					<field presence="o">38</field>
+					<field presence="m">39</field>
+					<field presence="m">41</field>
+					<field presence="m">42</field>
+					<field presence="m">49</field>
+					<field presence="o">51</field>
+					<field presence="m">53</field>
+					<field presence="o">55</field>
+					<field presence="o">58</field>
+					<field presence="m">64</field>
+				</msg>
+				<msg mti="1420" >
+					<field presence="m">2</field>
+					<field presence="m">3</field>
+					<field presence="m">4</field>
+					<field presence="o">6</field>
+					<field presence="m">7</field>
+					<field presence="o">10</field>
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="m">24</field>
+					<field presence="m">25</field>
+					<field presence="o">30</field>
+					<field presence="m">32</field>
+					<field presence="m">37</field>
+					<field presence="m">38</field>
+					<field presence="o">43</field>
+					<field presence="o">49</field>
+					<field presence="o">51</field>
+					<field presence="m">53</field>
+					<field presence="o">54</field>
+					<field presence="m">56</field>
+					<field presence="o">58</field>
+					<field presence="m">64</field>
+				</msg>
+				<msg mti="1430" >
+					<field presence="m">2</field>
+					<field presence="m">3</field>
+					<field presence="m">4</field>
+					<field presence="o">6</field>
+					<field presence="m">7</field>
+					<field presence="o">10</field>
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="m">32</field>
+					<field presence="m">37</field>
+					<field presence="m">39</field>
+					<field presence="m">49</field>
+					<field presence="m">53</field>
+					<field presence="m">56</field>
+					<field presence="m">64</field>
+				</msg>
+				<msg mti="1804" >
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="m">24</field>
+					<field presence="m">25</field>
+					<field presence="m">53</field>
+					<field presence="m">93</field>
+					<field presence="m">94</field>
+					<field presence="m">128</field>
+				</msg>
+				<msg mti="1814" >
+					<field presence="m">11</field>
+					<field presence="m">12</field>
+					<field presence="m">39</field>
+					<field presence="m">53</field>
+					<field presence="m">93</field>
+					<field presence="m">94</field>
+					<field presence="m">128</field>
+				</msg>
+			</msg_composition>
+			<nodes>
+				<node>acquirer@mini</node>
+			</nodes>
+		</iso_interface>
+		<erl_interface
+			name="bg_example"
+			callback="{transaction_mgr,start_transaction,[]}" >
+			<nodes>
+				<node>acquirer@mini</node>
+			</nodes>
+		</erl_interface>
+	</interfaces>
+
+	<lines>
+		<line
+			interface="outgoing"
+			module="tcp_ch_connection" >
+			<connector
+				module="tcp_ch_connector">
+				<max_conn>1</max_conn>
+				<timeout>30000</timeout>
+				<retry>3</retry>
+				<ip>127.0.0.1</ip>
+				<port>40001</port>
+				<binary/>
+				<reuseaddr>true</reuseaddr>
+				<packet>2</packet>
+				<keepalive>true</keepalive>
+				<active>false</active>
+			</connector>
+			<nodes>
+				<node>acquirer@mini</node>
+			</nodes>
+		</line>
+	</lines>
+
+</efak_config>
+

@@ -1,0 +1,2 @@
+#!/bin/sh
+erl +K true -sname acquirer -config logfile -boot start_sasl -pa .. ../..

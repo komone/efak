@@ -1,0 +1,4 @@
+
+%% compiles bg_example
+{"*", [debug_info, {outdir, "../../ebin/bg_example"}]}.
+

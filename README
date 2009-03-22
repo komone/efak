@@ -1,0 +1,25 @@
+please contact me for feedbacks, have fun with erlang!
+pmontrasi-AT-gmail-DOT-org
+
+
+efak install instructions
+=========================
+
+To compile type from the current directory
+
+	erl -pa ./ebin -make
+
+To build the documentation type from the current directory
+
+	erl -noshell -eval "edoc:application(efak,\".\",[no_packages, {exclude_packages,[tsung]}])" -s init stop
+
+Look at the bg_example documentation for setting up the test environment.
+
+
+tsung plugin
+============
+
+efak includes a tsung plugin that enables tsung to fire iso8583 transactions.
+Look at the README-plugin file in the tsung subdirectory for installing and
+using it.
+

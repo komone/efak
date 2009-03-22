@@ -1,0 +1,79 @@
+ISO8583 tsung plugin
+====================
+
+Allows tsung to send ISO8583 transactions.
+The plugin requires the user to provide ISO8583 message specification via a
+separate xml file, mostly compatible with jpos (http://www.jpos.org).
+The directory examples contains a sample message specification to be used
+with the bg_example application and a tsung config file using the ISO8583 plugin.
+
+
+Install instructions
+--------------------
+
+Copy all the contents of this directory in the tsung source directory and
+build tsung. From the shell, go in the current directory and type
+
+# cp -r . ~/tsung-1.3.0
+
+if required, replace ~/tsung-1.3.0 with the directory where you installed the
+tsung source tree.
+
+# cd ~/tsung-1.3.0
+# ./configure
+# make
+# make install
+
+
+Using the plugin
+----------------
+
+1.	create a ISO8583 message specs file as the one located in the examples
+	directory or use your jpos packager configuration file.
+
+2.	create a tsung config file with ISO8583 options.
+
+	size_header option is used to create a size prefix for the message
+	before sending it. The plugin requires the presence of a size prefix to
+	receive and	parse the message response.
+
+	<option type="ts_iso8583" name="size_header" value="big-endian:2"></option>
+
+	Accepted values are
+
+	little-endian:NBYTES	NBYTES in little-endian for message length prefix
+	big-endian:NBYTES		NBYTES in big-endian for message length prefix
+	display:NBYTES			NBYTES in ascii format for message length prefix
+
+	isopackager option is required to specify the ISO8583 spec file to be used
+	when building and parsing messages. The value is the filename of the file.
+
+	<option type="ts_iso8583" name="isopackager" value="isospecs.xml"></option>
+
+3.	create one or more sessions of type ts_iso8583 and include in the request
+	tag the message structure of the ISO8583 message.
+	Specify the presence and value of fields that are part of the message to
+	be sent. Field 0 is assumed to be the message type identifier.
+
+		<iso8583>
+		  <field id="0" value="1100"/>
+		  <field id="2" value="6543210000000089"/>
+		  <field id="3" value="000000"/>
+		  <field id="4" value="100"/>
+		  ...
+		  ...
+		</iso8583>
+
+	Dynamic substitution can be used to access some hopefully useful functions
+	already included in the plugin:
+
+	%%ts_iso8583:yymmdd%% 		current local date in format YYMMDD
+	%%ts_iso8583:hhmmss%% 		current local time in format HHMMSS
+	%%ts_iso8583:yymmddhhmmss%%	current local datetime commonly used in BMP 12
+	%%ts_iso8583:unique_6%%		unique(?) 6 digit number commonly used in STAN
+	%%ts_iso8583:unique_12%%	unique(?) 12 digit number commonly used in RRN
+
+4.	save the file and run tsung to test your application.
+
+	tsung -f yourconfigfile.xml start
+

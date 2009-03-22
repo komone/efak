@@ -1,0 +1,8 @@
+
+%% compiles all packages
+{"*", [debug_info, {outdir, "../ebin"}, {i, "../include"}]}.
+{"erl_interface/*", [debug_info, {outdir, "../ebin"}, {i, "../include"}]}.
+{"iso_interface/*", [debug_info, {outdir, "../ebin"}, {i, "../include"}]}.
+{"lines/*", [debug_info, {outdir, "../ebin"}, {i, "../include"}]}.
+{"transactions/*", [debug_info, {outdir, "../ebin"}, {i, "../include"}]}.
+

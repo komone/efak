@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "@prefix@/share/@PACKAGE_NAME@/@DTD@">
+<tsung loglevel="warning" version="1.0">
+
+  <clients>
+    <client host="localhost" use_controller_vm="true"/>
+  </clients>
+
+  <!-- Server side setup -->
+ <servers>
+  <server host="mini" port="40001" type="tcp"/>
+  <server host="mini" port="40002" type="tcp"/>
+ </servers>
+
+  <monitoring>
+   <monitor host="mini" type="erlang"/>
+  </monitoring>
+  
+ <load>
+  <arrivalphase phase="1" duration="1" unit="minute">
+    <users interarrival="30" unit="second"></users>
+  </arrivalphase>
+ </load>
+
+  <options>
+   <option type="ts_iso8583" name="size_header" value="big-endian:2"></option>
+   <option type="ts_iso8583" name="isopackager" value="berlingroup.xml"></option>
+  </options>
+
+ <sessions>
+  <session probability="100" name="iso8583-example" type="ts_iso8583">
+    <transaction name="authorization">
+      <request subst="true">
+		<iso8583>
+		  <field id="0" value="1100"/>
+		  <field id="2" value="6543210000000089"/>
+		  <field id="3" value="000000"/>
+		  <field id="4" value="100"/>
+		  <field id="7" value="%%ts_iso8583:mmddhhmmssUTC%%"/>
+		  <field id="11" value="%%ts_iso8583:unique_6%%"/>
+		  <field id="12" value="%%ts_iso8583:yymmddhhmmss%%"/>
+		  <field id="22" value="1000101U3130"/>
+		  <field id="24" value="100"/>
+		  <field id="26" value="7333"/>
+		  <field id="32" value="65401000001"/>
+		  <field id="37" value="%%ts_iso8583:unique_12%%"/>
+		  <field id="41" value="88888888"/>
+		  <field id="42" value="555555555555555"/>
+		  <field id="43" value="BESTPICS SHOP\\CITY\0100      XXXYYY"/>
+		  <field id="49" value="978"/>
+		  <field id="53" value="SECURITYINFO"/>
+		  <field id="64" value="**MAC***"/>
+		</iso8583>
+	  </request>
+    </transaction>
+
+  </session>
+ </sessions>
+</tsung>
+

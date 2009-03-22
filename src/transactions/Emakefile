@@ -1,0 +1,4 @@
+
+%% compiles transaction_mgr package
+{"*", [debug_info, {outdir, "../../ebin"}, {i, "../../include"}]}.
+

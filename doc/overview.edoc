@@ -1,0 +1,56 @@
+
+@title	efak - Erlang Financial Application Kit
+
+@doc	An erlang implementation of the ISO 8583 protocol.
+
+efak is a set of distributed processes to build financial application based
+on the iso8583 protocol.
+
+efak is composed of three main parts
+
+== Interfaces ==
+
+Interfaces handle specific iso8583 implementation that you can configure
+to match your requirement.
+In the configuration file you can specify the iso fields and messages
+each single interface needs to implement.
+The interface processes handle message parsing/testing against
+the configured specification and logging of transactions.
+
+Look at {@link efak_app} for configuring interfaces and to
+{@link iso_interface} for using interface services
+from you application.
+
+== Lines ==
+
+Lines provide connection capability to remote iso8583 interfaces you have to
+connect to.
+Lines can be deployed on different nodes for redundancy and
+load balancing while being connected to a single interface.
+
+efak includes an implementation of tcp lines, look at
+{@link tcp_connector} and {@link tcp_acceptor}.
+
+== Transactions ==
+
+Every incoming message is handled within an erlang process, common transaction
+flow is implemented in the {@link iso_transaction} behaviour.
+The {@link transaction_mgr} collects messages coming from the interfaces and
+starts the transaction processes.
+The {@link bg_example} application demonstrates how to configure and use efak.
+
+<br></br><hr></hr>
+<em>efak is an exercise which I started to learn the erlang language. I decided
+to start this project after having found on the internet the
+[http://www.sics.se/~joe/ Joe Armstrong thesis].
+Having made experience in the past in building financial application, I
+started to think erlang shold be a useful instrument in building such kind
+of applications.
+
+efak does not have chanches to be of practical use because
+many security requirements are completly missing from the code.
+Anyway I think efak can be useful for testing purposes, if you
+have chanches to spend time in using it please provide me feedbacks and
+improvements, I still want to practice erlang ... it's fun!
+</em>
+

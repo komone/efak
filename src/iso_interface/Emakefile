@@ -1,0 +1,4 @@
+
+%% compiles iso_interface package
+{"*", [debug_info, {outdir, "../../ebin"}, {i, "../../include"}]}.
+

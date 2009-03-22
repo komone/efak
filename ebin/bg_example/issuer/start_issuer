@@ -1,0 +1,3 @@
+#!/bin/sh
+erl +K true -sname issuer -config logfile -boot start_sasl -pa .. ../..
+ 
